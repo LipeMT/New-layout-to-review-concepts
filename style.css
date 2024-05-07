@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --input-p-color: hsl(244, 38%, 28%);
+    --h-color: hsl(320, 69%, 42%);
+}
+
+body,
+input,
+textarea,
+button {
+    font-size: 1.6rem;
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: var(--h-color);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+
+    & p {
+        font-size: 2rem;
+    }
+
+    & img {
+        max-width: 80%;
+        margin: 0 auto 1.7rem;
+    }
+
+    & section {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3.6rem;
+    }
+}
+
+p {
+    color: var(--input-p-color);
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 2.8rem;
+    color: var(--h-color);
+}
+
+main {
+    max-width: 80rem;
+    margin-inline: auto;
+}
+
+.cards {
+    display: grid;
+    gap: 4.8rem;
+    background: linear-gradient(#343193, #302C63);
+    padding-block: 4.8rem;
+}
+
+.card {
+    margin-inline: auto;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 1.8rem;
+    padding: 2.4rem;
+
+    & img {
+        margin-bottom: 3.2rem;
+    }
+
+    & h2 {
+        margin-bottom: 2.0rem;
+    }
+}
+
+.form {
+    max-width: 80%;
+    margin: 7.2rem auto 6.4rem;
+
+    & h2 {
+        margin-bottom: 1.6rem;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    & button {
+        width: 40%;
+        border-radius: 16px;
+        padding: 1.6rem;
+        background: linear-gradient(#343193, #302C63);
+        color: white;
+        border: none;
+
+    }
+}
+
+.input-wrapper {
+
+    & input,
+    textarea {
+        width: 100%;
+        border-radius: 1.6rem;
+        padding: 1.6rem 0 1.6rem 4.8rem;
+        border: .15rem solid var(--input-p-color);
+    }
+
+    & textarea {
+        padding: 1.6rem;
+        height: 12.6rem;
+    }
+}
+
+#stars {
+    display: none;
+}
+
+#user {
+    background-image: url(assets/user.svg);
+    background-repeat: no-repeat;
+    background-position: 1.4rem center;
+}
+
+#email {
+    background-image: url(assets/@.svg);
+    background-repeat: no-repeat;
+    background-position: 1.4rem center;
+}
+
+footer {
+    background: linear-gradient(#343193, #302C63);
+    padding: 1.6rem;
+    text-align: center;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 1200px) {
+    header{
+        position: relative;
+        flex-direction: row;
+        gap: 2.8rem;
+        & section{
+            order: -1;
+            text-align: left;
+            min-width: 5;
+            & h1{
+                font-size: 5.2rem;
+            }
+            & p{
+                font-size: 2.8rem;
+            }
+            & img{
+                margin-left: 0;
+                position: absolute;
+                bottom: 1.2rem;            
+            }
+        }
+        padding-left: 10rem ;
+    }
+main{
+    max-width: none;
+    width: 100%;
+}
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6rem;
+        width: 100%;
+        padding: 6.4rem 10rem;
+    }
+    .card{
+        max-width: fit-content;
+    }
+    
+    #stars{
+        display: block;
+        position: static;
+        opacity: 1;
+        max-width: 64rem;
+        min-width: fit-content;
+    }
+    .form{
+        width: 100%;
+        padding-inline: 10rem;
+    }
+    .contact{
+        display: flex;
+        width: 100%;
+        gap: 8rem;
+    }
+}
